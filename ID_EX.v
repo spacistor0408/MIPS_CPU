@@ -1,22 +1,23 @@
 module ID_EX( clk, rst, en_reg,
-             RegDst, ALUOp, ALUSrc, RegDst_out, ALUOp_out, ALUSrc_out,
-             rd1, rd2, wn, extend_immed, alu_ctl, multuOp, total_alu_sel,
+             RegDst,     ALUOp,     ALUSrc,
+             RegDst_out, ALUOp_out, ALUSrc_out,
+             rd1,     rd2,     wn,     extend_immed,     alu_ctl,     multuOp,     total_alu_sel,
              rd1_out, rd2_out, wn_out, extend_immed_out, alu_ctl_out, multuOp_out, total_alu_sel_out );
 
-    input clk, rst, en_reg, multuOp, ALUSrc, RegDst;
+    input clk, rst, en_reg,RegDst multuOp, ALUSrc;
     input[1:0] total_alu_sel, ALUOp;
     input[2:0] alu_ctl;
     input[4:0] wn;
     input[31:0] rd1, rd2, extend_immed;
     
-    output multuOp_out, ALUSrc_out, RegDst_out;
+    output RegDst_out, multuOp_out, ALUSrc_out;
     output[1:0] total_alu_sel_out, ALUOp_out;
     output[2:0] alu_ctl_out;
     output[4:0] wn_out;
     output[31:0] rd1_out, rd2_out, extend_immed_out;
     
-    reg multuOp_out, ALUSrc_out, RegDst_out;
-    reg[1:0] total_alu_sel_out, ALUOp;
+    reg RegDst_out, multuOp_out, ALUSrc_out;
+    reg[1:0] total_alu_sel_out, ALUOp_out;
     reg[2:0] alu_ctl_out;
     reg[4:0] wn_out;
 
@@ -27,23 +28,23 @@ module ID_EX( clk, rst, en_reg,
     always @( posedge clk ) begin
       if ( rst ) 
       begin
-        RegDst_out <= 1'b0;
-        ALUSrc_out <= 1'b0;
-        ALUOp_out <= 2'b00;
-        multuOp_out <= 1'b0;
-        total_alu_sel_out <= 2'b00;
-        alu_ctl_out <= 3'b000;
-        wn_out <= 5'b00000;
+        RegDst_out        <= 1'b0;
+        ALUSrc_out        <= 1'b0;
+        ALUOp_out         <= 2'b0;
+        multuOp_out       <= 1'b0;
+        total_alu_sel_out <= 2'b0;
+        alu_ctl_out       <= 3'b0;
+        wn_out            <= 5'b0;
       end
       else if ( en_reg )
       begin
-        RegDst_out <= RegDst;
-        ALUSrc_out <= ALUSrc;
-        ALUOp_out <= ALUOp;
-        multuOp_out <= multuOp;
+        RegDst_out        <= RegDst;
+        ALUSrc_out        <= ALUSrc;
+        ALUOp_out         <= ALUOp;
+        multuOp_out       <= multuOp;
         total_alu_sel_out <= total_alu_sel;
-        alu_ctl_out <= alu_ctl;
-        wn_out <= wn;
+        alu_ctl_out       <= alu_ctl;
+        wn_out            <= wn;
       end
     end
     
