@@ -23,6 +23,7 @@ module control_single( opcode, RegDst, ALUSrc, MemtoReg, RegWrite,
 	reg[1:0] ALUOp;
 
 	parameter R_FORMAT = 6'd0;
+	parameter ADDIU = 6'd9;
 	parameter LW = 6'd35;
 	parameter SW = 6'd43;
 	parameter BEQ = 6'd4;
@@ -34,6 +35,11 @@ module control_single( opcode, RegDst, ALUSrc, MemtoReg, RegWrite,
 				begin
 					RegDst = 1'b1; ALUSrc = 1'b0; MemtoReg = 1'b0; RegWrite = 1'b1; MemRead = 1'b0; 
 					MemWrite = 1'b0; Branch = 1'b0; Jump = 1'b0; ALUOp = 2'b10;
+				end
+			ADDIU :
+				begin
+					RegDst = 1'b0; ALUSrc = 1'b1; MemtoReg = 1'b0; RegWrite = 1'b1; MemRead = 1'b0; 
+					MemWrite = 1'b0; Branch = 1'b0; Jump = 1'b0; ALUOp = 2'b00;
 				end
 			LW :
 				begin
