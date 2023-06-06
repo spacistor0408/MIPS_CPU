@@ -32,9 +32,9 @@ module EX_MEM( clk, rst, en_reg,
       else if ( en_reg )
       begin
         wn_out <= wn;
-        MemRead <= MemRead_out;
-        MemWrite <= MemWrite_out;
-        Branch <= Branch_out;
+        MemRead_out <= MemRead;
+        MemWrite_out <= MemWrite;
+        Branch_out <= Branch;
       end
     end
 

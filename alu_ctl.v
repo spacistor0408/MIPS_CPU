@@ -11,12 +11,15 @@
 */
 
 module alu_ctl(ALUOp, Funct, ALUOperation, multuOp, total_alu_sel);
-    input [1:0] ALUOp;
-    input [5:0] Funct;
-    output [2:0] ALUOperation;
+    input[1:0] ALUOp;
+    input[5:0] Funct;
+    output[2:0] ALUOperation;
     output multuOp;
-    output [1:0] total_alu_sel;
-    reg    [2:0] ALUOperation;
+    output[1:0] total_alu_sel;
+
+    reg multuOp;
+    reg[1:0] total_alu_sel;
+    reg[2:0] ALUOperation;
 
     // symbolic constants for instruction function code
     parameter F_add = 6'd32;

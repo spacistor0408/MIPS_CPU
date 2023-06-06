@@ -22,7 +22,7 @@ module ALU( ctl, dataA, dataB, dataOut, zero );
   wire [31:0] result ; // store output
   wire inv, set ;
 
-  reg zero ;
+  wire zero ;
 
 
   assign set = sumAdd[31] ;

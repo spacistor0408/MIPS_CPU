@@ -10,7 +10,7 @@ module MEM_WB( clk, rst, en_reg,
     input[31:0] rd, total_alu;
 
     output RegWrite_out, MemtoReg_out;
-    input[4:0] wn_out;
+    output[4:0] wn_out;
     output[31:0] rd_out, total_alu_out;
 
     reg RegWrite_out, MemtoReg_out;
