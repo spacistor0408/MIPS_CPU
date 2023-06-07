@@ -9,7 +9,6 @@
 		2. zero:   branch指令所需要的輸出
 */
 
-`timescale 1ns/1ns
 module ALU( ctl, dataA, dataB, dataOut, zero );
   input [2:0] ctl ;
   input [31:0] dataA ;

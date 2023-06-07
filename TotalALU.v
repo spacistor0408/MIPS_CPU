@@ -1,4 +1,4 @@
-`timescale 1ns/1ns
+
 module TotalALU( clk, dataA, dataB, ALUOp, Output, reset );
 input reset ;
 input clk ;

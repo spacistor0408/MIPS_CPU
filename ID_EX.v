@@ -9,7 +9,7 @@ module ID_EX( clk, rst, en_reg,
              rd1_out, rd2_out, rt_out, rd_out, extend_immed_out, funct_out );
 
     input clk, rst, en_reg, RegDst, ALUSrc;
-    input Branch, MemRead, MemWrite, RegWrite, MemtoReg,;
+    input Branch, MemRead, MemWrite, RegWrite, MemtoReg;
     input[1:0] ALUOp;
     input[4:0] rt, rd;
     input[5:0] funct;
@@ -38,7 +38,6 @@ module ID_EX( clk, rst, en_reg,
         RegDst_out        <= 1'b0;
         ALUSrc_out        <= 1'b0;
         ALUOp_out         <= 2'b0;
-        wn_out            <= 5'b0;
         Branch_out        <= 1'b0;
         MemRead_out       <= 1'b0;
         MemWrite_out      <= 1'b0;

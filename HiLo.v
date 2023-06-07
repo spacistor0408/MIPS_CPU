@@ -1,4 +1,3 @@
-`timescale 1ns/1ns
 module HiLo( clk, MULTUAns, HiOut, LoOut, reset );
 
 	input clk ;

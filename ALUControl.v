@@ -1,4 +1,3 @@
-`timescale 1ns/1ns
 module ALUControl( clk, sel, seltoALU, seltoSHT, seltoMULTU, seltoMUX );
 	input clk ;
 	input  [5:0] sel ;

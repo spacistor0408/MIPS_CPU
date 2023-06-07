@@ -1,4 +1,3 @@
-`timescale 1ns/1ns
 module MUX( ALUOut, HiOut, LoOut, Shifter, sel, dataOut );
 	input [31:0] ALUOut ;
 	input [31:0] HiOut ;

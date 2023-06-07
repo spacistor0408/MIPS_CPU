@@ -41,6 +41,7 @@ module alu_ctl(ALUOp, Funct, ALUOperation, multuOp, total_alu_sel);
 
     always @(ALUOp or Funct)
     begin
+        total_alu_sel = 2'b00;
         case (ALUOp) 
             2'b00 : ALUOperation = ALU_add;
             2'b01 : ALUOperation = ALU_sub;

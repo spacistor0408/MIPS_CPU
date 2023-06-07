@@ -1,4 +1,3 @@
-`timescale 1ns/1ns
 module MUX2_1( i0, i1, sel, out );
   
   input i0, i1 ;

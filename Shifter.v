@@ -1,4 +1,4 @@
-`timescale 1ns/1ns
+
 module Shifter( dataA, dataB, dataOut, reset);
   input reset;
   input [31:0] dataA;

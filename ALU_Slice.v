@@ -12,7 +12,6 @@
 
 //-----------------------------------------------------------------------------
 
-`timescale 1ns/1ns
 module ALU_Slice( a, b, cin, less, ctl, cout, out, sumAdd ) ;
   
   input a, b, cin, less ;
